@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      
+}
+
+
+
+
+nav{
+    background-color: #f0eae0;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+
+}
+.enlace{
+
+    position: absolute;
+    padding: 5px 50px;
+
+    
+}
+.logo{ 
+    width: 200px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block; 
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+li a.active, li:hover{
+    background-color:#4fc3f0;
+    transition: .5s;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+.Checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 22px;
+   cursor: pointer;
+   display: none;
+   
+}
+
+#Check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .Checkbtn{
+        display: block;
+    }
+    ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:#869ea7;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 100px ;
+    }
+
+    nav ul li a{
+        font-size: 35px;
+    }
+    li a:hover  li a.active{
+        background: none;
+        color:#9d5353;
+    }
+    #Check:checked ~ ul{
+        left: 0;
+    }
+
+   
+    
+
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-image: url(in.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+   
+    
+}
+
+
+
+
+h1{
+    font-size: 170px;
+    line-height: 80px;
+    color: #eedcba;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+p{
+    font-size: 30px;
+    color: #f7eddb;
+    text-align: left;
+    padding: 30px;
+    margin: 50px 540px 25px 25px;
+}
+
+.container-carousel{
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 50px 950px 250px;
+   box-shadow:  10px 10px 32px 10px rgba(0, 0, 0, 0.95) ;
+
+}
+
+.carruseles {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-section {
+    width: calc(100%/5);
+    height: 100%;
+  
+    
+}
+
+.slider-section img{
+   width: 500px;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+   
+}
+
+.slider-section h3{
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    font-size: 80px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #eedcba;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+    padding-bottom: 250px;
+}
+.btn-right{
+    right: 120px;
+    
+}
+.btn-left{
+    left: 890px;
+}
+
+.btn-left:hover,
+.btn-right:hover{
+
+    color: #00004e;
+}
+
+
+
+.footer{
+    background-color: #f0eae0;
+    padding: 80px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+h4{
+ font-size: 25px;
+ color: #4fc3f0;
+ margin-bottom: 25px;
+ font-weight: 500;
+ border-bottom: 2px solid #204e60;
+ padding-bottom: 10px;
+ display: inline-block;
+
+}
+ul li a{
+    font-size: 18px;
+    color: black;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3 ease;
+}
+
+ .social a{
+    display: inline-block ;
+    min-height: 40px;
+    width: 40px;
+    background-color:black;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+
+}
+
+.footer-links a:hover{
+    background-color:#4fc3f0;
+}
+
+@media (max-width:991px ) {
+    .btn-left,
+    .btn-right{
+        display: none;
+    }
+
+    .contenedor-1>h1{
+        font-size: 100px;
+    }
+
+    .contenedor-1>p{
+        margin: 50px 50px 25px 25px;
+
+    }
+
+    .container-carousel{
+        margin: 50px 250px 50px;
+    }
+
+    .footer-row{
+    text-align: center;  
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+     
+
+
+}

@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav{
+    background-color: #f0eae0;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+
+}
+.enlace{
+
+    position: absolute;
+    padding: 5px 50px;
+
+    
+}
+.logo{ 
+    width: 200px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block; 
+    line-height: 80px;
+    margin: 0 5px;
+} 
+
+nav ul li .icon {
+
+    font-size: 35px;
+    
+}
+nav ul li .icon .nav-card li {
+ 
+    list-style: none;
+    padding: 0.8rem;
+    font-weight: bold;
+    
+}
+
+nav ul li .icon i:hover > .buy-card{
+
+    width: 470px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: #f0eae0;    
+}
+
+
+nav ul li .icon i:hover .nav-card {
+
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1e1;
+    
+}
+
+nav ul li .icon  i:hover .buy-card > button{
+
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1e1;
+    color: #090043;
+    cursor: pointer;
+}
+
+nav ul li .icon  i:hover .buy-card > button:hover{
+    border: solid thin #2da0cd;
+    transition: all 1.4s;
+    
+}
+
+.lista_productos div{
+    display: none;
+    text-align: center;
+    padding: 10px 10px 0 0;
+    border-top: solid thin gray;
+
+}
+
+nav ul li .icon i:hover .buy-card > .lista_productos div{
+    display: flex;
+}
+
+
+.lista_productos img{
+    width: 120px;
+}
+
+.lista_productos p{
+    width: 300px;
+    font-size: 1.2rem;
+
+}
+
+.lista_productos p:last-child span{
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: white;
+}
+
+.nav-card{
+    display: none;
+}
+
+nav button{
+    display: none;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+li a.active, li:hover{
+    background-color:#4fc3f0;
+    transition: .5s;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+.Checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 22px;
+   cursor: pointer;
+   display: none;
+   
+}
+
+#Check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .Checkbtn{
+        display: block;
+    }
+    ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:#869ea7;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 100px ;
+    }
+
+    nav ul li a{
+        font-size: 35px;
+    }
+    li a:hover  li a.active{
+        background: none;
+        color:#9d5353;
+    }
+    #Check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+ .container-0{
+    background-color:#faf8f5;
+
+ }
+ h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 70px;
+    color: #090043;
+    text-transform: uppercase;
+    padding: 30px;
+ }
+.grid{
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(3,350px);
+    padding-bottom: 50px;
+}
+
+.items{
+    background-color: white;
+    border: solid thin #e1e1e1e1;
+}
+
+.items img{
+    width: 100%;
+    height: 230px;
+}
+
+.info{
+    padding: 15px;
+
+}
+
+.info h3, .info p{
+    color: #090043;
+    margin-bottom: 15px;
+
+}
+
+.info h3{
+    font-size: 20px;
+}
+.info p{
+    font-size: 18px;
+}
+.precio p:first-child{
+    text-decoration: line-through;
+}
+
+.precio{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p{
+    font-size: 20px;
+}
+
+.info button{
+    padding: 1rem;
+    width: 100%;
+    background-color: #4fc3f0;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+ .info button:hover{
+    background-color: #2da0cd;
+    transition: all .3s;
+}
+
+.footer{
+    background-color: #f0eae0;
+    padding: 20px 0;
+
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 100px;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+h4{
+ font-size: 25px;
+ color: #4fc3f0;
+ margin-bottom: 25px;
+ font-weight: 500;
+ border-bottom: 2px solid #204e60;
+ padding-bottom: 10px;
+ display: inline-block;
+}
+ul li a{
+    font-size: 18px;
+    color: black;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3 ease;
+}
+
+ .social a{
+    display: inline-block ;
+    min-height: 40px;
+    width: 40px;
+    background-color:black;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+
+}
+
+.footer-links a:hover{
+    background-color:#4fc3f0;
+}
+
+
+
